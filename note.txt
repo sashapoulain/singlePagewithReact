@@ -1,0 +1,73 @@
+index.js
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './components/root/App';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'alertifyjs/build/css/alertify.min.css'
+import configureStore from './redux/reducers/configureStore';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom'
+
+const store = configureStore();
+const root = ReactDOM.createRoot(document.getElementById('root'))
+
+root.render(<BrowserRouter>
+   <Provider store={store}><App /></Provider></BrowserRouter>)
+
+
+
+App.jsx
+
+import { Container } from "reactstrap";
+import Navi from "../navi/Navi";
+import Dashboard from "./Dashboard";
+import { Route, Routes } from 'react-router-dom';
+import CartDetail from '../cart/CartDetail';
+import AddOrUpdateProduct from "../products/AddOrUpdateProduct";
+import NotFound from "../common/NotFound";
+
+function App() {
+  return (
+    <Container>
+      <Navi />
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/product" element={<Dashboard />} />
+        <Route path="/saveproduct/:productId" element={<AddOrUpdateProduct />} />
+        <Route path="/saveproduct" element={<AddOrUpdateProduct />} />
+        <Route path="/cart" element={<CartDetail />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Container>
+  );
+}
+
+export default App;
+
+
+
+
+nasıl kullanılır
+
+import './App.css'
+import { Button } from 'reactstrap';
+import { FaBeer } from 'react-icons/fa'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBaby } from '@fortawesome/free-solid-svg-icons';
+import 'bootstrap-icons/font/bootstrap-icons.css'
+// import { Route, Routes } from 'react-router-dom';
+
+export default function App() {
+  return (
+    <>
+      <h1>React</h1>
+      <Button color='danger'>Click</Button>
+      <h3>Let' s go for a <FaBeer /></h3>
+      <h4>Hi <FontAwesomeIcon icon={faBaby} /></h4>
+      <h4>i <i className="bi bi-arrow-through-heart" style={{fontSize: '2rem'}}></i> u</h4>     
+    </>
+  )
+}
+
+
