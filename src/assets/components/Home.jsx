@@ -42,12 +42,12 @@ export default function Home() {
             </div>
             <div className="row mb-5 btns justify-content-evenly">
                <div className="col-xl-4">
-                  <a className='appImg'>
+                  <a className='appImg' href='#'>
                      <img src={iosApp} />
                   </a>
                </div>
                <div className="col-xl-4">
-                  <a className='appImg'>
+                  <a className='appImg' href='#'>
                      <img src={androidApp} />
                   </a>
                </div>

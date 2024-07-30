@@ -4,7 +4,9 @@ import Button from './Button'
 
 
 export default function About() {
- 
+   const buttonCustomize = {
+      text: 'Download'
+   }
    const boutXsTitle = 'Lorem Ipsum Dolor'
    const boutTitle = 'About Circle App & Details'
    const boutContent = `
@@ -27,7 +29,9 @@ export default function About() {
                   <h4 className='about-xs-title'>{boutXsTitle}</h4>
                   <h2 className="about-title">{boutTitle}</h2>
                   <p className="about-content">{boutContent}</p>
-                  <Button background={'#f7e8e8'} borderRadius={'200px'} fontWeight={'600'} padding={'15px 20px'} color={'#262626'}/>
+                  <Button buttonCustomize={buttonCustomize} />
+
+                  {/* <Button background={'#f7e8e8'} borderRadius={'200px'} fontWeight={'600'} padding={'15px 20px'} color={'#262626'}/> */}
                   <div className='text-end'>
                      <img src={emptyCircle} className='img-fluid' />
                   </div>
