@@ -31,7 +31,6 @@ export default function About() {
                   <p className="about-content">{boutContent}</p>
                   <Button buttonCustomize={buttonCustomize} />
 
-                  {/* <Button background={'#f7e8e8'} borderRadius={'200px'} fontWeight={'600'} padding={'15px 20px'} color={'#262626'}/> */}
                   <div className='text-end'>
                      <img src={emptyCircle} className='img-fluid' />
                   </div>

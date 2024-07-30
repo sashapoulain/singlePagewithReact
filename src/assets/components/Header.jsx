@@ -1,6 +1,5 @@
 // import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
-// import logo from '../images/logowhitesy.png'
 import Logo from './Logo';
 import Menu from './Menu';
 

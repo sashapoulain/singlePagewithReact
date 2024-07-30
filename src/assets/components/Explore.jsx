@@ -6,8 +6,8 @@ export default function Explore() {
    const buttonCustomize = {
       text: 'Download'
    }
- 
-   const downloadSTitle ='Explore'
+
+   const downloadSTitle = 'Explore'
    const downloadContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
    return (
       <div className="download-area" id='download'>
@@ -18,7 +18,6 @@ export default function Explore() {
                   <p className="text-center download-text">{downloadContent}</p>
                   <Button buttonCustomize={buttonCustomize} />
 
-                  {/* <Button background={'white'} margin={'2rem 0'} width={'25%'} borderRadius={'200px'} fontWeight={'600'} padding={'15px 20px'} color={'#262626'} /> */}
                </div>
             </div>
          </div>
